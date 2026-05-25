@@ -20,7 +20,10 @@ body {
 }
 
 .hero {
-    background-image: url("../img/footer-bg.jpg");
-    background-size: cover;
-    background-position: top center;
+    background-image: url("../img/dc-logo-bg.png"), url("../img/footer-bg.jpg");
+    background-position:
+        right center,
+        top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 500px, cover;
 }

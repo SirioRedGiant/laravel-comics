@@ -6,36 +6,9 @@
 
         <nav class="h-100">
             <ul class="nav gap-4 small fw-semibold h-100">
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Characters</a>
-                </li>
-                <li class="nav-item d-flex align-items-center border-bottom border-primary border-4">
-                    <a class="nav-link text-primary px-0 py-5" href="{{ route('home') }}">Comics</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Movies</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">TV</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Games</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Collectibles</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Videos</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Fans</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">News</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-dark px-0 py-5" href="#">Shop</a>
-                </li>
+                @foreach(config('menus.header_links') as $text => $url)
+                <x-nav-link :url="$url" :text="$text" :active="$text === 'Comics'" />
+                @endforeach
             </ul>
         </nav>
     </div>
