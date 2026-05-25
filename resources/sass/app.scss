@@ -1,8 +1,26 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url("https://fonts.bunny.net/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+body {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.jumbotron {
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    background-position: top center;
+    height: 530px;
+}
+
+.hero {
+    background-image: url("../img/footer-bg.jpg");
+    background-size: cover;
+    background-position: top center;
+}

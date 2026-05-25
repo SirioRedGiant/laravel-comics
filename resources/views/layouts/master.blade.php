@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    @include('partials/header')
+    @include('partials.header')
+
     <div class="jumbotron"></div>
-    <main>
+
+    <main style="background-color: #1c1c1c;">
         @yield('content')
     </main>
-    @include('partials/footer')
+
+    @include('partials.footer')
 </body>
 
 </html>
