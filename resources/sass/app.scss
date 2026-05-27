@@ -27,3 +27,9 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-size: 500px, cover;
 }
+
+a.active {
+    color: #0282f9;
+    border-bottom: 5px solid #0282f9;
+    padding-bottom: 40px;
+}

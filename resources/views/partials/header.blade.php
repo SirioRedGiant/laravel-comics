@@ -6,8 +6,12 @@
 
         <nav class="h-100">
             <ul class="nav gap-4 small fw-semibold h-100">
-                @foreach(config('menus.header_links') as $text => $url)
-                <x-nav-link :url="$url" :text="$text" :active="$text === 'Comics'" />
+                @foreach(config('menus.header_links') as $text => $routeName)
+                <x-nav-link
+                    :url="$routeName === '#' ? '#' : route($routeName)"
+                    :text="$text"
+                    :active="$routeName === '#' ? false : request()->routeIs($routeName)" />
+                <!--//note "request()->routeIs($routeName)" ==> è una funzione nativa di Laravel che controlla direttamente se la rotta attiva ha quel nome -->
                 @endforeach
             </ul>
         </nav>
