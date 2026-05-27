@@ -3,9 +3,9 @@
 return [
     // array per i link della Navbar
     'header_links' => [
-        'Characters' => '#',
+        'Characters' => '/characters',
         'Comics' => '/',
-        'Movies' => '#',
+        'Movies' => '/movies',
         'TV' => '#',
         'Games' => '#',
         'Collectibles' => '#',
